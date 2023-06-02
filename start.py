@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-
+print("the ali")
 class Net(nn.Module):
     def __init__():
         super(Net, self).__init__()
@@ -22,3 +22,8 @@ class Net(nn.Module):
         x = self.fc2(x)
         x = self.softmax(x)
         return x    
+    
+net = Net()
+
+net.load_state_dict(torch.load('model.pth'))
+net.eval()
